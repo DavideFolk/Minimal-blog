@@ -79,7 +79,3 @@ app.post('/compose', (req, res) => {
 app.listen(3000, function () {
 	console.log('Server started on port 3000');
 });
-
-for (const i of posts) {
-	console.log(i.title);
-}
