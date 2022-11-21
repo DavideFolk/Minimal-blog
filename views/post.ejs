@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+<h1><%= title %> </h1>
+<p><%= elemBody %></p>
+<br>
+<br>
+<h1>More for you</h1>
+<% posts.forEach((elem) => { %>
+    <% if(elem.title !== title) { %>
+    <p><span class="h4"><%= elem.title + '  '%></span><%= elem.content.slice(0, 100) + '...' %> <a href="/posts/<%= elem.title %>"><i class="bi bi-arrow-right-square" style="font-size: 2rem; color: cornflowerblue;"></i></a></p>
+    <% } %>
+<% }); %>
+<%- include('partials/footer') %>
